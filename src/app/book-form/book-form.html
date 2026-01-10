@@ -1,0 +1,63 @@
+<form [formGroup]="newBookForm" (ngSubmit)="submitForm()">
+  <mat-dialog-content>
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+      @if(newBookForm.get('title')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" />
+      @if(newBookForm.get('author')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Genre</mat-label>
+      <input matInput formControlName="genre" />
+      @if(newBookForm.get('genre')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Published</mat-label>
+      <input matInput formControlName="published" />
+      @if(newBookForm.get('published')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Score</mat-label>
+      <input matInput formControlName="score" />
+      @if(newBookForm.get('score')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description" />
+      @if(newBookForm.get('description')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Read on</mat-label>
+      <input matInput formControlName="readOn" />
+      @if(newBookForm.get('readOn')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Read</mat-label>
+      <input matInput formControlName="read" />
+      @if(newBookForm.get('read')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="closeForm()">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="newBookForm.invalid"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,11 @@
+.userInfo {
+}
+
+.deleteButton {
+  background-color: rgb(219, 66, 66);
+}
+
+.editButton {
+  margin-left: 10px;
+  background-color: rgb(77, 185, 231);
+}
