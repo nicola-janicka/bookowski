@@ -4,6 +4,7 @@ import { Component, EventEmitter, Output, Inject } from '@angular/core';
 import { User } from '../../user';
 import { UserService } from '../../user.service';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
+
 import {
   MatDialogClose,
   MAT_DIALOG_DATA,
@@ -15,6 +16,7 @@ import { Validators, FormGroup } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { maxCurrentYearValidator } from '../../forms.validators';
 
 @Component({
   selector: 'app-book-form',
@@ -56,7 +58,12 @@ export class BookForm {
         title: [this.data.book.title, Validators.required],
         author: [this.data.book.author, Validators.required],
         genre: [this.data.book.genre],
-        published: [this.data.book.published],
+        published: [
+          this.data.book.published
+            ? new Date(this.data.book.published).getFullYear()
+            : '',
+          [Validators.pattern(/^\d{4}$/), maxCurrentYearValidator()],
+        ],
         score: [this.data.book.score],
         description: [this.data.book.description],
         readOn: [this.data.book.readOn],
