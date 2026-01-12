@@ -19,12 +19,6 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" style="width: 100%">
-      <mat-label>Published</mat-label>
-      <input matInput formControlName="published" />
-      @if(newBookForm.get('published')?.invalid){<mat-error></mat-error>}
-    </mat-form-field>
-
-    <mat-form-field appearance="fill" style="width: 100%">
       <mat-label>Score</mat-label>
       <input matInput formControlName="score" />
       @if(newBookForm.get('score')?.invalid){<mat-error></mat-error>}
@@ -34,6 +28,12 @@
       <mat-label>Description</mat-label>
       <input matInput formControlName="description" />
       @if(newBookForm.get('description')?.invalid){<mat-error></mat-error>}
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Read start</mat-label>
+      <input matInput formControlName="readStart" />
+      @if(newBookForm.get('readStart')?.invalid){<mat-error></mat-error>}
     </mat-form-field>
 
     <mat-form-field appearance="fill" style="width: 100%">

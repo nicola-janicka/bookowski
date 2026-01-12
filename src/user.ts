@@ -16,9 +16,9 @@ export class User {
     title: string,
     author?: string,
     genre?: string,
-    published?: Date,
     score?: number,
     description?: string,
+    readStart?: Date,
     readOn?: Date
   ) {
     let newBook = new Book(title);
@@ -28,14 +28,15 @@ export class User {
     if (genre !== undefined) {
       newBook.genre = genre;
     }
-    if (published !== undefined) {
-      newBook.published = published;
-    }
+
     if (score !== undefined) {
       newBook.score = score;
     }
     if (description !== undefined) {
       newBook.description = description;
+    }
+    if (readStart !== undefined) {
+      newBook.readStart = readStart;
     }
     if (readOn !== undefined) {
       newBook.readOn = readOn;

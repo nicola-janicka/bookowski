@@ -9,10 +9,10 @@ export class Book {
   title: string;
   author: string = '';
   genre: string = '';
-  published: Date = new Date();
   score: number = 0;
   description: string = '';
-  readOn: Date = new Date();
+  readStart?: Date;
+  readOn?: Date;
   read: ReadStatus = ReadStatus.New;
 
   constructor(title: string) {

@@ -9,6 +9,7 @@ import {
   addDoc,
   deleteDoc,
   updateDoc,
+  Timestamp,
 } from 'firebase/firestore';
 import { User } from './user';
 import { doc } from 'firebase/firestore';
@@ -98,9 +99,10 @@ export class UserService {
         title: book.title,
         author: book.author,
         genre: book.genre,
-        published: book.published,
         score: book.score,
         description: book.description,
+        readStart: book.readStart ? Timestamp.fromDate(book.readStart) : null,
+        readOn: book.readOn ? Timestamp.fromDate(book.readOn) : null,
         read: book.read,
       };
       booksList.push(tempBook);

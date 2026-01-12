@@ -82,9 +82,9 @@ export class UserPage implements OnInit {
         book.title = formData.title;
         book.author = formData.author;
         book.genre = formData.genre;
-        book.published = formData.published;
         book.score = formData.score;
         book.description = formData.description;
+        book.readStart = formData.readStart;
         book.readOn = formData.readOn;
         book.read = formData.read;
 
