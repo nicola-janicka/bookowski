@@ -104,6 +104,7 @@ export class UserService {
         readStart: book.readStart ? Timestamp.fromDate(book.readStart) : null,
         readOn: book.readOn ? Timestamp.fromDate(book.readOn) : null,
         read: book.read,
+        pages: book.pages,
       };
       booksList.push(tempBook);
     });

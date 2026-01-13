@@ -19,7 +19,8 @@ export class User {
     score?: number,
     description?: string,
     readStart?: Date,
-    readOn?: Date
+    readOn?: Date,
+    pages?: number
   ) {
     let newBook = new Book(title);
     if (author !== undefined) {
@@ -40,6 +41,9 @@ export class User {
     }
     if (readOn !== undefined) {
       newBook.readOn = readOn;
+    }
+    if (pages !== undefined) {
+      newBook.pages = pages;
     }
 
     this.books.push(newBook);

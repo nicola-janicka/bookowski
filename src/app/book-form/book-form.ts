@@ -62,6 +62,7 @@ export class BookForm {
         readStart: [this.data.book.readStart],
         readOn: [this.data.book.readOn],
         read: [this.data.book.read],
+        pages: [this.data.book.pages],
       });
     } else {
       this.newBookForm = this.fb.group({
@@ -73,6 +74,7 @@ export class BookForm {
         readStart: [''],
         readOn: [''],
         read: [''],
+        pages: [''],
       });
     }
   }

@@ -14,6 +14,7 @@ export class Book {
   readStart?: Date;
   readOn?: Date;
   read: ReadStatus = ReadStatus.New;
+  pages: number = 0;
 
   constructor(title: string) {
     this.title = title;

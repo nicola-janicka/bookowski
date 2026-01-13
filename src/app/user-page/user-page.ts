@@ -50,7 +50,7 @@ export class UserPage implements OnInit {
     dialogRef.afterClosed().subscribe((formData) => {
       console.log(formData);
       if (formData) {
-        this.user.addBook(formData.title, formData.author);
+        this.user.addBook(formData);
         this.us.updateUser(this.user);
 
         this.cdr.detectChanges();
@@ -87,6 +87,7 @@ export class UserPage implements OnInit {
         book.readStart = formData.readStart;
         book.readOn = formData.readOn;
         book.read = formData.read;
+        book.pages = formData.pages;
 
         this.us.updateUser(this.user);
         this.cdr.detectChanges();
