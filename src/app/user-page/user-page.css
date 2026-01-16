@@ -9,3 +9,7 @@
   margin-left: 10px;
   background-color: rgb(77, 185, 231);
 }
+
+.book-row {
+  cursor: pointer;
+}

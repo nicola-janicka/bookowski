@@ -2,6 +2,9 @@
 
 <!-- <button (click)="openBookForm()">Add new book</button> -->
 
+<button>Up next</button>
+<button>Current</button>
+<button>Read</button>
 @if (formIsOpen) {
 <app-book-form (newItemEvent)="addBook($event)"></app-book-form>
 } @else {
@@ -24,7 +27,11 @@
 
     <tr>
       <td>{{ $index + 1 }}</td>
-      <td>{{ book.title }}</td>
+
+      <td class="book-row" [routerLink]="['/book-card', $index]">
+        {{ book.title }}
+      </td>
+
       <td>{{ book.author }}</td>
       @if (book.read == 0) {
       <td>New</td>

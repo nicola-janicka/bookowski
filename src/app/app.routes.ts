@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: UserPage,
   },
   {
-    path: 'book-card',
+    path: 'book-card/:index',
     component: BookCard,
   },
 ];

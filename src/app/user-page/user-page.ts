@@ -8,13 +8,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { BookForm } from '../book-form/book-form';
 import { title } from 'process';
 import { SimpleChanges } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { BookCard } from '../book-card/book-card';
 
 //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
 //Add 'implements OnInit' to the class.
 
 @Component({
   selector: 'app-user-page',
-  imports: [FormsModule, BookForm],
+  imports: [FormsModule, BookForm, RouterLink, RouterOutlet, BookCard],
   templateUrl: './user-page.html',
   styleUrl: './user-page.css',
 })
